@@ -1,5 +1,4 @@
-.home_container {
-    background-color: purple;
-    height: 100vh;
-    text-align: center;
+.home_non_mobile {
+    display: flex;
+    margin-left: 10vw;
 }

@@ -1,11 +1,22 @@
-import "../styles/home.css"
+import { Stevegary } from "../components/Stevegary";
+import { CallToAction } from "../components/CallToAction";
+import { useMediaPredicate } from "react-media-hook";
+import "../styles/home.css";
 
 const Home = () => {
-    return ( 
-        <div className="home_container">
-            <h1>Home Page</h1>
-        </div>    
-    )
-}
- 
+    const biggerThan480 = useMediaPredicate("(min-width: 480px)");
+
+    if (biggerThan480) {
+        return <div className="home_non_mobile">
+            <CallToAction />
+            <Stevegary />
+        </div>
+    } else {
+        return <div>
+            <CallToAction />
+            <Stevegary />
+        </div>
+    }
+};
+
 export default Home;
