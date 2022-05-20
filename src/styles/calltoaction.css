@@ -1,0 +1,10 @@
+.calltoaction_text {
+    height: 10vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    color: red;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-family: helvetica;
+    font-size: 2em;
+}

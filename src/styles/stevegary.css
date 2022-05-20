@@ -1,0 +1,55 @@
+.stevegary_profile_pic {
+    border-radius: 1rem;
+}
+
+.stevegary_user_name {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stevegary_user_title {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.stevegary_user_bio {
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 240px;
+    margin: auto;
+    border: 1px solid;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.stevegary_social_icons {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.stevegary_social_icons i {
+    margin-left: 10px;
+}
+
+.stevegary_link {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 240px;
+    border: 1px solid red;
+    border-radius: 1em;
+}
+
+.stevegary_container {
+    color: red;
+    font-family: helvetica;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 80vw;
+    text-align: center;
+    align-items: centre;
+}
