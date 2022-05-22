@@ -1,11 +1,11 @@
 import "../styles/navbar.css"
 
 const Navbar = () => {
-    return ( 
+    return (
         <div className="navbar_container">
-            <h1 className="navbar_title">Navbar</h1>
+            <h3 className="navbar_title">Navbar</h3>
         </div>
-     )
+    )
 }
- 
+
 export default Navbar;

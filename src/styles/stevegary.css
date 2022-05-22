@@ -1,55 +1,90 @@
 .stevegary_profile_pic {
+    width: 240px;
+    height: auto;
     border-radius: 1rem;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
 }
 
 .stevegary_user_name {
+    padding: 3px;
+    border-radius: 1rem;
     font-size: 2em;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
 }
 
 .stevegary_user_title {
+    padding: 3px;
+    border-radius: 1rem;
     font-size: 1em;
     margin-bottom: 20px;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
 }
 
-.stevegary_user_bio {
-    padding: 1rem;
-    border-radius: 1rem;
-    max-width: 240px;
-    margin: auto;
-    border: 1px solid;
-    font-size: 1em;
-    margin-bottom: 10px;
-}
 .stevegary_social_icons {
+    padding: 3px;
+    border-radius: 1rem;
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
 }
 
-.stevegary_social_icons i {
+.stevegary_social_icons a {
+    color: whitesmoke;
     margin-left: 10px;
 }
 
+.stevegary_social_icons a:hover {
+    cursor: pointer;
+}
+
 .stevegary_link {
+    text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 240px;
-    border: 1px solid red;
     border-radius: 1em;
+    text-align: center;
+    width: 240px;
+}
+
+.stevegary_custom_links {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+}
+
+.stevegary_custom_links a {
+    text-decoration: none;
+}
+
+.stevegary_custom_links a:hover {
+    background: whitesmoke;
+    color: #923cb5;
+    text-decoration: none;
 }
 
 .stevegary_container {
-    color: red;
-    font-family: helvetica;
-    margin-top: 5vh;
+    margin-top: 1vh;
     margin-left: 10vw;
+    margin-bottom: 6vh;
     padding: 1rem;
     border-radius: 1.5rem;
     width: 80vw;
     text-align: center;
     align-items: centre;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
 }
