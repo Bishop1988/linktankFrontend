@@ -11,6 +11,7 @@ export const signUp = async (username, email, password, setter) => {
         })
         const data = await response.json()
         setter(data.user)
+        localStorage.setItem("myToken", data.token)
         console.log(data)
     } catch (err) {
         console.log(err)
@@ -19,9 +20,12 @@ export const signUp = async (username, email, password, setter) => {
 
 export const listUsers = async (setter) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_REST_API}user`)
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+            method: "GET",
+            headers: { Authorization: localStorage.getItem("myToken") }
+        })
         const data = await response.json()
-        setter(data.users)
+        setter(data.user)
         console.log(data)
     } catch (err) {
         console.log(err)
