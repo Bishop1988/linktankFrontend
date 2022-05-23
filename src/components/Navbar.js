@@ -1,10 +1,10 @@
 import "../styles/navbar.css"
 
 const Navbar = () => {
-    return ( 
+    return (
         <div className="navbar_container">
             <div className="navbar_leftside">
-                <h1 className="navbar_title">Linktank</h1>
+                <h3 className="navbar_title">Navbar</h3>
                 {/* {loggedin && <a className="navbar_mypage">My page</a>} This is for conditional rendering later*/}
             </div>
             <div className="navbar_rightside">
@@ -17,7 +17,7 @@ const Navbar = () => {
                 {/* again these will both be for conditional rendering later, need to know how the signing in will work properly first*/}
             </div>
         </div>
-     )
+    )
 }
- 
+
 export default Navbar;

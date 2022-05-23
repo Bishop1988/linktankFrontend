@@ -1,4 +1,20 @@
-.home_non_mobile {
-    display: flex;
-    margin-left: 10vw;
+.home_desktop {
+  display: flex;
+  width: 40vw;
+  margin-left: 20vw;
+}
+
+.home_tablet {
+  display: flex;
+  width: 60vw;
+  margin-right: 30vw;
+}
+
+.home_phone {
+  background-color: #923cb5;
+  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+}
+
+.home_left {
+
 }

@@ -1,11 +1,11 @@
 import "../styles/footer.css"
 
 const Footer = () => {
-    return ( 
+    return (
         <div className="footer_container">
-            <h1 className="footer_title">&copy;Linktank 2022</h1>
+            <h3> &copy; Linktank 2022 </h3>
         </div>
-     )
+    )
 }
- 
+
 export default Footer;
