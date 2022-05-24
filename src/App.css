@@ -1,6 +1,5 @@
 *, *::before, *::after {
-  background-color: #923cb5;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+  background-color: gray;
   color: whitesmoke;
   box-sizing: border-box;
   padding: 0;
