@@ -2,6 +2,6 @@ import "../styles/calltoaction.css";
 
 export const CallToAction = () => {
     return <h1 className="calltoaction_text">
-        Just ONE link in your bio...
+        The Only Social Link You Will Ever Need.
     </h1>
 };

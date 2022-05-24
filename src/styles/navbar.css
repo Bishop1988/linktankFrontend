@@ -1,6 +1,6 @@
 .navbar_container {
-  padding: 0.5rem;
-  border-radius: 1rem;
-  background-color: #923cb5;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+  padding: 0.2rem;
+  background-color: lightgray;
+  background-image: lightgray;
 }
+
