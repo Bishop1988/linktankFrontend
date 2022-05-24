@@ -18,7 +18,7 @@ export const signUp = async (username, email, password, setter) => {
     }
 }
 
-export const listUsers = async (setter) => {
+export const login = async (setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
             method: "GET",
@@ -29,5 +29,16 @@ export const listUsers = async (setter) => {
         console.log(data)
     } catch (err) {
         console.log(err)
+    }
+}
+
+export const listUsers = async (setter) => {
+    try {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user/list`)
+        const data = await response.json()
+        setter(data.users)
+        console.log(data)
+    } catch (err) {
+        console.log(err)        
     }
 }

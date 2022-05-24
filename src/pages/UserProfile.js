@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid'
-import { listUsersInfo } from "../utils";
+import { listUsers } from "../utils";
 
 import "../styles/userProfile.css"
 
 const UserProfile = () => {
     const [links, setLinks] = useState([])
+    const [users, setUsers] = useState([])
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
 
     useEffect(() => {
-        listUsersInfo(setLinks)
+        listUsers(setUsers)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -50,7 +51,7 @@ const UserProfile = () => {
                         <p>username</p>
                         {links.map((link, i) => {
                             return (
-                                <div className="userProfile_card">
+                                <div onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
                                     <p>{link.title}</p>
                                     <p>{link.address}</p>
                                 </div>
@@ -76,9 +77,16 @@ const UserProfile = () => {
                 
                 {links.map((link, i) => {
                     return (
-                        <div className="userProfile_card">
+                        <div onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
                             <p>{link.title}</p>
                             <p>{link.address}</p>
+                        </div>
+                    )
+                })}
+                {users.map((user, i) => {
+                    return (
+                        <div key={i}>
+                            <p>{user}</p>
                         </div>
                     )
                 })}

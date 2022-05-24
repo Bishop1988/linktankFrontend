@@ -65,6 +65,7 @@
     border-radius: 15px;
     padding: 3px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
 }
 
 .userProfile_inputs {
