@@ -1,4 +1,5 @@
 import ProfilePic from "../img/steve-gary-smol.png";
+import { Link } from "react-router-dom";
 import "../styles/stevegary.css";
 
 export const Stevegary = () => {
@@ -9,7 +10,7 @@ export const Stevegary = () => {
             <p className="stevegary_user_title">Software Engineer</p>
             <div className="stevegary_custom_links">
                 <div className="stevegary_link">
-                    <a href="#" alt="dummy portfolio link">PORTFOLIO</a>
+                    <Link to="/UserProfile">PORTFOLIO</Link>
                 </div>
                 <div className="stevegary_link">
                     <a href="#" alt="dummy resume link">RESUME</a>

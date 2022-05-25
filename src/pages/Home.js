@@ -1,40 +1,29 @@
 import { Stevegary } from "../components/Stevegary";
-import { CallToAction } from "../components/CallToAction";
-import { HomeLinks } from "../components/HomeLinks";
+import { Link } from "react-router-dom";
 
-import { useMediaPredicate } from "react-media-hook";
 import "../styles/home.css";
 
 const Home = () => {
-  const biggerThanPhone = useMediaPredicate("(min-width: 576px)");
-  const biggerThanTablet = useMediaPredicate("(min-width: 768px)");
-
-  if (biggerThanTablet) {
-    return <div className="home_desktop">
-      <div className="home_left">
-        <CallToAction />
-        <HomeLinks />
+    return (
+      <div className="home_desktop">
+        <div className="home_left">
+        <h1 className="calltoaction_text">
+        The Only Social Link You Will Ever Need.
+    </h1>
+    <div className="home_links">
+        <div className="home_link">
+            <Link to="/login">LOG IN</Link>
+            {/* <a href="../pages/login" alt="Log in">LOG IN</a> */}
+        </div>
+        <div className="home_link">
+            <Link to="../pages/signup">SIGN UP</Link>
+            {/* <a href="../pages/signup" alt="Sign up">SIGN UP</a> */}
+        </div>
+    </div>        
+    </div>
+        <Stevegary />
       </div>
-      <Stevegary />
-    </div>
-  }
-
-  else if (biggerThanPhone) {
-    return <div className="home_tablet">
-      <div className="home_left">
-        <CallToAction />
-        <HomeLinks />
-      </div>
-      <Stevegary />
-    </div>
-  }
-
-  else {
-    return <div className="home_phone">
-      <CallToAction />
-      <Stevegary />
-    </div>
-  }
+    )
 };
 
 export default Home;

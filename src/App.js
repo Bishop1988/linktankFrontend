@@ -5,11 +5,13 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Edit from "./pages/Edit"
-import User from "./pages/User"
+import UserProfile from "./pages/UserProfile";
+// import User from "./pages/User"
 
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   return (
@@ -21,7 +23,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/edit" element={<Edit />} />
-          <Route path="/user" element={<User />} />
+          <Route path="/UserProfile" element={<UserProfile />} />
         </Routes>
         <Footer />
       </div>
