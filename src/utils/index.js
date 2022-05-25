@@ -32,9 +32,14 @@ export const login = async (setter) => {
     }
 }
 
-export const listUsers = async (setter) => {
+export const getUser = async (username, setter) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_REST_API}user/list`)
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user/getUser`, {
+            method: "POST",
+            body: JSON.stringify({
+                username: username,
+            })
+        })
         const data = await response.json()
         setter(data.users)
         console.log(data)
