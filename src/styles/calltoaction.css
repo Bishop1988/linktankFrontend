@@ -1,7 +1,11 @@
 .calltoaction_text {
   height: 12vh;
-  padding-top: 1vh;
+  padding-top: 20vh;
   margin-top: 1vh;
-  padding-left: 2rem;
-  border-radius: 1rem;
+  /* padding-left: 1rem; */
+  border-radius: 10rem;
+  font-size: 40px;
+  color: black;
 }
+
+/* The main slogan on the homepage */

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from 'uuid'
 import { listUsers } from "../utils";
 
 import "../styles/userProfile.css"
@@ -26,9 +25,8 @@ const UserProfile = () => {
         e.preventDefault()
 
         const newLink = {
-            id: uuidv4(),
-            title: linkTitle,
-            address: linkAddress
+            socialName: linkTitle,
+            url: linkAddress
         }
 
         setLinks([...links].concat(newLink))
@@ -41,6 +39,8 @@ const UserProfile = () => {
         const updatedLinks = [...links].filter(link => link.id !== id)
         setLinks(updatedLinks)
     }
+
+    console.log(users)
     
     return ( 
         <div className="userProfile_container">
@@ -52,8 +52,8 @@ const UserProfile = () => {
                         {links.map((link, i) => {
                             return (
                                 <div onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
-                                    <p>{link.title}</p>
-                                    <p>{link.address}</p>
+                                    <p>{link.socialName}</p>
+                                    <p>{link.url}</p>
                                 </div>
                             )
                         })}
@@ -86,7 +86,8 @@ const UserProfile = () => {
                 {users.map((user, i) => {
                     return (
                         <div key={i}>
-                            <p>{user}</p>
+                            <p>{user.socialLinks.socialName}</p>
+                            <p>{user.socialLinks.url}</p>
                         </div>
                     )
                 })}

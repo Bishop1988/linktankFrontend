@@ -5,7 +5,7 @@ import "../styles/homelinks.css";
 export const HomeLinks = () => {
     return <div className="home_links">
         <div className="home_link">
-            <Link to="../pages/login">LOG IN</Link>
+            <Link to="/login">LOG IN</Link>
             {/* <a href="../pages/login" alt="Log in">LOG IN</a> */}
         </div>
         <div className="home_link">

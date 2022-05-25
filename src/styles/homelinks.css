@@ -11,20 +11,20 @@
 }
 
 .home_links {
-  margin-top: 23vh;
+  margin-top: 35vh;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 9px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #923cb5;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+  background-color: lightgray;
+  background-image: darkgray;
 }
 
 .home_links a:hover {
   background: whitesmoke;
-  color: #923cb5;
+  color: darkgray;
   text-decoration: none;
 }
 

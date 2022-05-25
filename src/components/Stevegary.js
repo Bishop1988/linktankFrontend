@@ -10,7 +10,7 @@ export const Stevegary = () => {
             <p className="stevegary_user_title">Software Engineer</p>
             <div className="stevegary_custom_links">
                 <div className="stevegary_link">
-                    <Link to="/src/pages/UserProfile.js">PORTFOLIO</Link>
+                    <Link to="/UserProfile">PORTFOLIO</Link>
                 </div>
                 <div className="stevegary_link">
                     <a href="#" alt="dummy resume link">RESUME</a>
