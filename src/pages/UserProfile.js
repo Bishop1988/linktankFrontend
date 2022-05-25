@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { listUsers } from "../utils";
+// import { getUser } from "../utils";
 
 import "../styles/userProfile.css"
 
 const UserProfile = () => {
     const [links, setLinks] = useState([])
-    const [users, setUsers] = useState([])
+    // const [user, setUser] = useState([])
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
 
-    useEffect(() => {
-        listUsers(setUsers)
-    }, [])
+    // useEffect(() => {
+    //     getUser(setUser)
+    // }, [])
 
     const inputLinkTitleHandler = (e) => {
         setLinkTitle(e.target.value)
@@ -40,7 +40,7 @@ const UserProfile = () => {
         setLinks(updatedLinks)
     }
 
-    console.log(users)
+    // console.log(users)
     
     return ( 
         <div className="userProfile_container">
@@ -51,7 +51,7 @@ const UserProfile = () => {
                         <p>username</p>
                         {links.map((link, i) => {
                             return (
-                                <div onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
+                                <div key={i} onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
                                     <p>{link.socialName}</p>
                                     <p>{link.url}</p>
                                 </div>
@@ -77,20 +77,20 @@ const UserProfile = () => {
                 
                 {links.map((link, i) => {
                     return (
-                        <div onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
-                            <p>{link.title}</p>
-                            <p>{link.address}</p>
+                        <div key={i} onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
+                            <p>{link.socialName}</p>
+                            <p>{link.url}</p>
                         </div>
                     )
                 })}
-                {users.map((user, i) => {
+                {/* {user[0].socialLinks.map((link, i) => {
                     return (
                         <div key={i}>
-                            <p>{user.socialLinks.socialName}</p>
-                            <p>{user.socialLinks.url}</p>
+                            <p>{link.socialName}</p>
+                            <p>{link.url}</p>
                         </div>
                     )
-                })}
+                })} */}
             </div>
         </div>
      )
