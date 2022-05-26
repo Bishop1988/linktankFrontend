@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/signup" element={<Signup setUser={setUser} />} />
           <Route path="/edit" element={<Edit />} />
           <Route path="/UserProfile" element={<UserProfile />} />
+          <Route path="/u/:target" element={<UserPage user={user}/>}/>
         </Routes>
         <Footer />
       </div>
