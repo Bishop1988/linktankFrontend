@@ -36,6 +36,7 @@ export const getUser = async (username, setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user/getUser`, {
             method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 username: username,
             })
@@ -47,3 +48,18 @@ export const getUser = async (username, setter) => {
         console.log(err)        
     }
 }
+// export const getUser = async (username, setter) => {
+//     try {
+//         const response = await fetch(`${process.env.REACT_APP_REST_API}user/getUser`, {
+//             method: "POST",
+//             body: JSON.stringify({
+//                 username: "bob",
+//             })
+//         })
+//         const data = await response.json()
+//         // setter(data.user)
+//         console.log(data)
+//     } catch (err) {
+//         console.log(err)        
+//     }
+// }
