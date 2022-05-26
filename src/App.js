@@ -6,7 +6,7 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Edit from "./pages/Edit"
 import UserProfile from "./pages/UserProfile";
-// import User from "./pages/User"
+import UserPage from "./pages/UserPage"
 
 import './App.css';
 
@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/signup" element={<Signup setUser={setUser} />} />
           <Route path="/edit" element={<Edit />} />
           <Route path="/UserProfile" element={<UserProfile />} />
+          <Route path="/u/:target" element={<UserPage user={user}/>}/>
         </Routes>
         <Footer />
       </div>
