@@ -25,7 +25,7 @@ const Login = details => {
     });
   } else {
     console.log("Details do not match");
-    setError("WRONG DETAILS MATE!")
+    setError("Please check your details and try again")
   }
 }
 
@@ -39,9 +39,9 @@ const Login = details => {
 
 
 return (
-  <div className="App">
+  <div className="login_container">
     {(user.email !="") ? (
-    <div className="welcome">
+    <div className="login_welcome">
       <h2>Welcome <span>{user.name}</span></h2>
       <button onClick={Logout}>Logout</button>
     </div>

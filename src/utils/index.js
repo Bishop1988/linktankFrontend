@@ -2,17 +2,17 @@ export const signUp = async (username, email, password, setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 username: username,
                 email: email,
-                password: password
-            })
-        })
-        const data = await response.json()
-        setter(data.user)
+                password: password,
+            }),
+        });
+        const data = await response.json();
+        setter(data.user.username);
         localStorage.setItem("myToken", data.token)
-        console.log(data)
+        console.log(data.user.username)
     } catch (err) {
         console.log(err)
     }
