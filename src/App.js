@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { useState } from "react";
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
@@ -14,6 +14,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
+  const [user, setUser] = useState("");
+  console.log(user)
   return (
     <Router>
       <div className="App">
@@ -21,7 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup setUser={setUser} />} />
           <Route path="/edit" element={<Edit />} />
           <Route path="/UserProfile" element={<UserProfile />} />
         </Routes>
