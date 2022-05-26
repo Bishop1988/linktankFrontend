@@ -1,8 +1,9 @@
 *, *::before, *::after {
-  background-color: gray;
+  /* background-color: gray;
   color: whitesmoke;
-  box-sizing: border-box;
+  font-family: montserrat, sans-serif; */
   padding: 0;
   margin: 0;
-  font-family: helvetica;
+  box-sizing: border-box;
+  
 }
