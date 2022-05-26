@@ -1,0 +1,3 @@
+# This should redirect from any url through the index so that netlify can find the page that
+
+/* / 200
