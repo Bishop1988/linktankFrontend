@@ -41,7 +41,7 @@ export const getUser = async (username, setter) => {
             })
         })
         const data = await response.json()
-        setter(data.users)
+        setter(data.user)
         console.log(data)
     } catch (err) {
         console.log(err)        

@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
-// import { getUser } from "../utils";
+import { getUser } from "../utils";
 
 import "../styles/userProfile.css"
 
 const UserProfile = () => {
     const [links, setLinks] = useState([])
-    // const [user, setUser] = useState([])
+    const [user, setUser] = useState([])
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
 
-    // useEffect(() => {
-    //     getUser(setUser)
-    // }, [])
+
+    useEffect(() => {
+        getUser(setUser)
+    }, [])
 
     const inputLinkTitleHandler = (e) => {
         setLinkTitle(e.target.value)
@@ -40,7 +41,7 @@ const UserProfile = () => {
         setLinks(updatedLinks)
     }
 
-    // console.log(users)
+    console.log(user)
     
     return ( 
         <div className="userProfile_container">
@@ -83,14 +84,14 @@ const UserProfile = () => {
                         </div>
                     )
                 })}
-                {/* {user[0].socialLinks.map((link, i) => {
+                {user.map((link, i) => {
                     return (
                         <div key={i}>
                             <p>{link.socialName}</p>
                             <p>{link.url}</p>
                         </div>
                     )
-                })} */}
+                })}
             </div>
         </div>
      )
