@@ -1,17 +1,18 @@
+.calltoaction_text {
+  font-family: roboto;
+  height: 12vh;
+  padding-top: 20vh;
+  margin-top: 1vh; 
+  font-size: 35px;
+  color: black;
+  
+}
+
+
 .home_desktop {
   display: flex;
   width: 40vw;
   margin-left: 20vw;
 }
 
-.home_tablet {
-  display: flex;
-  width: 60vw;
-  margin-right: 30vw;
-}
-
-.home_phone {
-  background-color: lightgray;
-  background-image: lightgray;
-}
 
