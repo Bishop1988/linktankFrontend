@@ -7,12 +7,12 @@
 
 }
 
-input, button {
+/* input, button {
     appearance: none;
     background: none;
     border: none;
     outline: none;
-}
+} */
 
 .login_container {
     height: 100vh;
@@ -26,7 +26,7 @@ input, button {
     
 }
 
-form {
+/* form {
     display: block;
     position: relative;
 
@@ -53,10 +53,10 @@ form .form-inner {
     
 
 
-}
+} */
 
 /* Login title */
-
+/* 
 form .form-inner h2 {
     color: rgb(50, 50, 50);
     font-size: 28px;
@@ -69,9 +69,9 @@ form .form-inner .form-group {
     display: block;
     width: 280px;
     margin-bottom: 10px;
-}
+} */
 
-.form-inner .form-group label {
+/* .form-inner .form-group label {
     display: block;
     color: rgb(50, 50, 50);
     font-size: 12px;
@@ -82,29 +82,29 @@ form .form-inner .form-group {
 .form-inner .form-group:focus-within label {
     color: orangered;
 
-}
+} */
 
 
 /* Entries for Name, email and password boxes */
 
-form .form-inner .form-group input {
+/* form .form-inner .form-group input {
     display: block;
     width: 100%;
     padding: 10px 15px;
     background-color: rgb(225, 225, 225);
     border-radius: 8px;
     transition: 0.4s;
-}
+} */
 
 /* Minor transition when you input text into the boxes */
-
+/* 
 form .form-inner .form-group input:focus {
     box-shadow: 0px 0px 3px grey;
-}
+} */
 
 /* Login button */
 
-form .form-inner input[type="submit"], 
+/* form .form-inner input[type="submit"], 
 .login_welcome button {
     display: inline-block;
     padding: 10px 15px;
@@ -126,7 +126,7 @@ form .form-inner input[type="submit"],
 form .form-inner input[type="submit"]:hover,
 .login_welcome button:hover {
     background-position: 100% 0%;
-}
+} */
 
 .login_welcome {
     width: 100%;

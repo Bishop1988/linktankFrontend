@@ -17,7 +17,6 @@ const UserProfile = () => {
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
 
-
     useEffect(() => {
         getUser("michael" ,setUser)
     }, [])
@@ -92,19 +91,19 @@ const UserProfile = () => {
                         </div>
                     )
                 })}
-                {/* {data.map((link, i) => {
+                {data.map((link, i) => {
                     return (
                         <div className="userProfile_edit-link" key={i}>
                             <p>{link.socialName}</p>
                             <p>{link.url}</p>
                         </div>
                     )
-                })} */}
-                {/* {user.map((u, i) => {
+                })}
+                {/* {Object.keys(user).map((item, i) => {
                     return (
                         <div key={i}>
-                            <p>{u.email}</p>
-                            <p>{link.url}</p>
+                            <p>{user[item].socialName}</p>
+                            <p>{u.url}</p>
                         </div>
                     )
                 })} */}
