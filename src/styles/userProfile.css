@@ -80,3 +80,9 @@
     border-radius: 15px;
     padding: 3px;
 }
+
+.userProfile_edit-link {
+    border: 3px solid red;
+    min-width: 250px;
+    margin: 5px 0;
+}
