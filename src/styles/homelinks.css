@@ -1,0 +1,33 @@
+.home_link {
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 1rem;
+  text-align: center;
+  width: 240px;
+}
+
+.home_links {
+  margin-top: 35vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 9px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  background-image: white;
+}
+
+.home_links a:hover {
+  background: whitesmoke;
+  color: darkgray;
+  text-decoration: none;
+}
+
+.home_links a {
+  text-decoration: none;
+}

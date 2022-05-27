@@ -1,5 +1,9 @@
 *, *::before, *::after {
-  box-sizing: border-box;
+  /* background-color: gray;
+  color: whitesmoke;
+  font-family: montserrat, sans-serif; */
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  
 }

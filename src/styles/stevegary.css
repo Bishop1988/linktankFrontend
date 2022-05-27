@@ -1,0 +1,89 @@
+.stevegary_profile_pic {
+    width: 180px;
+    height: auto;
+    border-radius: 1rem;
+    background-color: lightgray;
+    background-image: darkgray;
+}
+
+.stevegary_user_name {
+    padding: 3px;
+    border-radius: 1rem;
+    font-size: 1.9em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: darkgray;
+    background-image: darkgray;
+}
+
+.stevegary_user_title {
+    padding: 3px;
+    border-radius: 1rem;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    background-color: darkgray;
+    background-image: darkgray;
+}
+
+.stevegary_social_icons {
+    padding: 3px;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin-top: 15px;
+    background-color:gray;
+}
+
+.stevegary_social_icons a {
+    color: black;
+    margin-left: 10px;
+}
+
+.stevegary_social_icons a:hover {
+    cursor: pointer;
+}
+
+.stevegary_link {
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 1em;
+    text-align: center;
+    width: 240px;
+}
+
+.stevegary_custom_links {
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    background-image: darkgray;
+}
+
+.stevegary_custom_links a {
+    text-decoration: none;
+}
+
+.stevegary_custom_links a:hover {
+
+    color: black;
+    text-decoration: none;
+}
+
+.stevegary_container {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: 6vh;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 80vw;
+    text-align: center;
+    align-items: centre;
+    background-color: darkgray;
+    background-image: darkgray;
+}

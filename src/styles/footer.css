@@ -1,0 +1,11 @@
+.footer_container {
+  background-color: darkgray;
+  background-image: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  text-align: center;
+}
