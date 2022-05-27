@@ -99,15 +99,22 @@ const UserProfile = () => {
                         </div>
                     )
                 })}
-                {/* {Object.keys(user).map((item, i) => {
+                {/* <p>{user.socialLinks.map((link, i) => {
                     return (
-                        <div key={i}>
-                            <p>{user[item].socialName}</p>
+                        <div>
+                            <p>{link.socialName}</p>
+                        </div>
+                    )
+                })}</p> */}
+                {/* {Object.entries(user).map(([key, value]) => {
+                    return (
+                        <div key={key.id}>
+                            <p>{value}</p>
                             <p>{u.url}</p>
                         </div>
                     )
                 })} */}
-                {user && 
+                {/* {user && 
                     user.socialLinks.map((item, i) => {
                         return (
                             <div>
@@ -116,7 +123,7 @@ const UserProfile = () => {
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
         </div>
      )
