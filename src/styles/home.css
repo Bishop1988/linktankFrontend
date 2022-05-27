@@ -1,8 +1,19 @@
+.calltoaction_text {
+  font-family: roboto;
+  height: 12vh;
+  padding-top: 20vh;
+  margin-top: 1vh; 
+  font-size: 35px;
+  color: black;
+  
+}
+
 .home_desktop {
   display: flex;
   width: 40vw;
   margin-left: 20vw;
 }
+
 
 @media screen and (max-width: 576px) {
   .home_phone {
