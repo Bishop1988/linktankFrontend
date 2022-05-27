@@ -8,7 +8,6 @@
   
 }
 
-
 .home_desktop {
   display: flex;
   width: 40vw;
@@ -16,3 +15,17 @@
 }
 
 
+@media screen and (max-width: 576px) {
+  .home_phone {
+    background-color: lightgray;
+    background-image: lightgray;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home_tablet {
+    display: flex;
+    width: 60vw;
+    margin-right: 30vw;
+  }
+}
