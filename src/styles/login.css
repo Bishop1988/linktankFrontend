@@ -1,11 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: montserrat, sans-serif;
 
 
 }
+
 
 /* input, button {
     appearance: none;
@@ -19,20 +17,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgb(85, 85, 122), rgb(94, 78, 94)) ;
+    background-image: linear-gradient(to bottom, rgb(69, 69, 123), rgb(86, 68, 96)) ;
 }
 
-.login_welcome {
-    
-}
-
-/* form {
+.Loginform_form {
     display: block;
     position: relative;
 
 }
 
-form:after {
+.Loginform_form:after {
     content: '';
     display: block;
     position: absolute;
@@ -41,31 +35,29 @@ form:after {
     right: -6px;
     bottom: -6px;
     z-index: 1;
-    background-image: linear-gradient(to bottom right, skyblue, turquoise);
+    background-image: linear-gradient(to bottom right, rgb(151, 213, 237), rgb(37, 213, 196));
 }
 
-form .form-inner {
+.Loginform_form .form-inner {
     position: relative;
     display:block;
     background-color: whitesmoke;
     padding: 30px;
     z-index: 2;
-    
-
-
 } */
 
 /* Login title */
-/* 
-form .form-inner h2 {
-    color: rgb(50, 50, 50);
-    font-size: 28px;
+
+
+.Loginform_form .form-inner h2 {
+    color: rgb(65, 65, 65);
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
 }
 
-form .form-inner .form-group {
+.Loginform_form .form-inner .form-group {
     display: block;
     width: 280px;
     margin-bottom: 10px;
@@ -73,10 +65,11 @@ form .form-inner .form-group {
 
 /* .form-inner .form-group label {
     display: block;
-    color: rgb(50, 50, 50);
-    font-size: 12px;
-    margin-bottom: 10px;
+    color: rgb(65, 65, 65);
+    font-size: 10px;
+    margin-bottom: 5px;
     transition: 0.4s;
+    text-align: left;
 }
 
 .form-inner .form-group:focus-within label {
@@ -87,14 +80,26 @@ form .form-inner .form-group {
 
 /* Entries for Name, email and password boxes */
 
-/* form .form-inner .form-group input {
+
+.Loginform_form .form-inner .form-group input {
     display: block;
     width: 100%;
     padding: 10px 15px;
     background-color: rgb(225, 225, 225);
     border-radius: 8px;
     transition: 0.4s;
-} */
+    border: none; 
+    outline: none;
+    
+}
+
+/* Minor transition when you input text into the boxes */
+
+.Loginform_form .form-inner .form-group input:focus {
+    box-shadow: 0px 0px 3px rgb(162, 162, 162);
+}
+
+/* Login button */
 
 /* Minor transition when you input text into the boxes */
 /* 
@@ -104,7 +109,7 @@ form .form-inner .form-group input:focus {
 
 /* Login button */
 
-/* form .form-inner input[type="submit"], 
+.Loginform_form .form-inner input[type="submit"],
 .login_welcome button {
     display: inline-block;
     padding: 10px 15px;
@@ -117,13 +122,12 @@ form .form-inner .form-group input:focus {
     font-weight: 700;
     cursor:pointer;
     margin-top: 2%;
-
-    
-
+    border: none; 
+    outline: none;
 
 }
 
-form .form-inner input[type="submit"]:hover,
+.Loginform_form .form-inner input[type="submit"]:hover,
 .login_welcome button:hover {
     background-position: 100% 0%;
 } */

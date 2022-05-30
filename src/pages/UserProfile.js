@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../utils";
+import { getUser, updateUser } from "../utils";
 
 import "../styles/userProfile.css"
 
@@ -13,12 +13,12 @@ const data = [
 
 const UserProfile = () => {
     const [links, setLinks] = useState([])
-    const [user, setUser] = useState("")
+    const [user, setUser] = useState([])
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
 
     useEffect(() => {
-        getUser("michael" ,setUser)
+        getUser("bob" ,setUser)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -41,6 +41,9 @@ const UserProfile = () => {
         setLinkTitle("")
         setLinkAddress("")
         // console.log(newLink)
+
+        updateUser("bob", newLink, setUser)
+        
     } 
 
     const deleteLinkHandler = (id) => {
@@ -83,7 +86,7 @@ const UserProfile = () => {
                     </div>
                 </form>
                 
-                {links.map((link, i) => {
+                {/* {links.map((link, i) => {
                     return (
                         <div key={i} onClick={() => deleteLinkHandler(link.id)} className="userProfile_card">
                             <p>{link.socialName}</p>
@@ -98,7 +101,16 @@ const UserProfile = () => {
                             <p>{link.url}</p>
                         </div>
                     )
-                })}
+                })} */}
+                {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
+                    console.log(item)
+                    return (
+                        <div key={i}>
+                            <p>{item.socialName}</p>
+                            <p>{item.url}</p>
+                        </div>
+                    )
+                })}</div>}
                 {/* <p>{user.socialLinks.map((link, i) => {
                     return (
                         <div>
