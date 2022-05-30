@@ -28,6 +28,7 @@ const Userpage=({user})=>{
                 )}
                 {/* conditional rendering so an unset profile doesn't try to render a profile */}
                 {user.username===target && <Link className="userPage_edit" to={"/UserProfile"}>Edit your profile</Link>}
+
         </div>
     )
 }
