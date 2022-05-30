@@ -63,7 +63,7 @@
     margin-bottom: 10px;
 } */
 
-/* .form-inner .form-group label {
+.form-inner .form-group label {
     display: block;
     color: rgb(65, 65, 65);
     font-size: 10px;
@@ -75,7 +75,7 @@
 .form-inner .form-group:focus-within label {
     color: orangered;
 
-} */
+}
 
 
 /* Entries for Name, email and password boxes */
@@ -87,7 +87,7 @@
     padding: 10px 15px;
     background-color: rgb(225, 225, 225);
     border-radius: 8px;
-    transition: 0.4s;
+    transition: 0.2s;
     border: none; 
     outline: none;
     
@@ -102,10 +102,10 @@
 /* Login button */
 
 /* Minor transition when you input text into the boxes */
-/* 
+
 form .form-inner .form-group input:focus {
     box-shadow: 0px 0px 3px grey;
-} */
+}
 
 /* Login button */
 

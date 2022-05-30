@@ -27,10 +27,11 @@ const Signup = ({ setUser }) => {
   // console.log(user)
   return (
     <div className="signup">
-      <h2>Create an account</h2>
+      <h2>Sign Up</h2>
       <p className="text">Sign up for LinkTank today! 
-      For some reason? Not really sure why. Burn social media. 
-      Down with capitalism.</p>
+      For some reason?
+    
+     Down with the patriarchy!</p>
       <form className="test" onSubmit={handleSignup}>
       <input
               onChange={(e) => setUsername(e.target.value)}

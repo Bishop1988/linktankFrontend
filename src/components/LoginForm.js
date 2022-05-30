@@ -21,7 +21,7 @@ function LoginForm({ setUser }) {
     }
   return (
     
-      <form onSubmit={submitHandler}>
+      <form className="Loginform_form" onSubmit={submitHandler}>
           <div className="form-inner">
               <h2>Login</h2>
               {/* {(error != "") ? ( <div className="error">{error}</div> ) :""} */}
@@ -38,7 +38,7 @@ function LoginForm({ setUser }) {
               <input type="password" name="password" id="password"  onChange={(e) => setPassword(e.target.value)} />
               </div>
               {/* <input type="submit" value="LOGIN"/> */}
-              <button type='submit'>submit</button>
+              <input type="submit" value= "Submit" button/>
         </div>
       </form>
 
