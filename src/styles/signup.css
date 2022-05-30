@@ -2,7 +2,7 @@
     height: calc(100vh - 70px);
 }
 
-/* .formContainer {
+.formContainer {
     margin: 100px auto;
     width: 500px;
     position: relative;
@@ -24,14 +24,14 @@
 }
 
 
-.form-success {
+form-success {
     text-align: center;
     font-size: 24px;
     margin-top: 80px;
     color: #fff;
 }
 
-.form {
+.test {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,7 +44,7 @@
     align-items: center;
 }
 
-.form h1 {
+.signup form h2 {
     font-size: 1rem;
     text-align: start;
     width: 80%;
@@ -52,25 +52,25 @@
     color: #fff;
 }
 
-.form-inputs {
+form-inputs {
     margin-bottom: 0.5rem;
     width: 80%;
 }
 
-.form-inputs p {
+form-inputs p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
     color: #f00e0e;
 }
 
-.form-label {
+form-label {
     display: inline-block;
     font-size: 0.8rem;
     margin-bottom: 6px;
     color: #fff;
 }
 
-.form-input {
+form-input {
     display: block;
     padding-left: 10px;
     outline: none;
@@ -80,12 +80,12 @@
     border: none;
 }
 
-.form-input::placeholder {
+form-input::placeholder {
     color: #595959;
     font-size: 12px;
 }
 
-.form-input-btn {
+form-input-btn {
     width: 60%;
     height: 50px;
     margin-top: 10px;
@@ -99,7 +99,7 @@
     font-size: 1rem;
 }
 
-.form-input-btn:hover {
+form-input-btn:hover {
     cursor: pointer;
     background: linear-gradient(
     90deg,
@@ -109,7 +109,7 @@
     transition: all 0.4s ease-out;
 }
 
-.form-input-login {
+form-input-login {
     font-size: 0.8rem;
     margin-top: 10px;
     color: #fff;
@@ -117,8 +117,18 @@
     text-align: center;
 }
 
-.form-input-login a {
+form-input-login a {
     text-decoration: none;
     color: #27cdff;
     font-weight: 600;
-} */
+}
+
+
+.signup {
+
+    text-align: center;
+}
+
+.text {
+    font-size: 12px;
+}
