@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import  LoginForm  from "../components/LoginForm";
 
 import "../styles/login.css"
@@ -12,6 +12,8 @@ const Login = () => {
 const [user, setUser] = useState ({});
 
 console.log(user)
+
+// console.log(user)
 // const [error,setError] = useState ("");
 
 // const Login = details => {
@@ -47,6 +49,7 @@ return (
 // )}
 // </div>
   <div>
+    <div className="spacer"></div>
     <LoginForm setUser={setUser} />
   </div>
 )}

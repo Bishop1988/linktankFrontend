@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     background-color: aliceblue;
-    height: 100vh;
+    height: calc(100vh - 70px);
     min-height: 800px;
+
+    margin-top: 70px;
 }
 
 .userProfile_display-link-container {
-    border: 3px solid pink;
+    border-top: 3px solid lightgray;
     flex: .70;
     display: flex;
     justify-content: center;
@@ -22,38 +24,38 @@
 
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .userProfile_add-link-container {
-    border: 3px solid yellow;
+    border: 3px solid lightgray;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .userProfile_button-container {
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
     margin: 1rem 0;
 }
 
-.userProfile_button-left {
-    width: 50%;
-    margin-right: 1rem;
-    height: 2rem;
-}
-
-.userProfile_button-right {
-    width: 50%;
-    margin-left: 2rem;
+.userProfile_button {
+    width: 150px;
+    /* height: 2rem; */
+    cursor: pointer;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 8px 10px;
 }
 
 .userProfile_cards-container {
-    border: 3px solid grey;
-    width: 80%;
+    /* border: 3px solid grey; */
+    /* width: 80%; */
     margin: 1rem 0;
 }
 
@@ -69,7 +71,7 @@
 }
 
 .userProfile_inputs {
-    border: 3px solid purple;
+    /* border: 3px solid purple; */
     display: flex;
     flex-direction: column;
 }
@@ -81,8 +83,64 @@
     padding: 3px;
 }
 
-.userProfile_edit-link {
-    border: 3px solid red;
-    min-width: 250px;
-    margin: 5px 0;
+.userProfile_link-card {
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.userProfile_link-mobile-display {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    width: 220px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfile_link-mobile-a {
+    text-decoration: none;
+}
+
+.userProfile_link-card-name {
+    display: flex;
+}
+
+.userProfile_link-card-url {
+    display: flex;
+}
+
+.userProfile_link-card-button {
+    margin-left: 10px;
+}
+
+.userProfile_input-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userProfile_input-container label {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.userImage-container {
+    margin: 10px 0;
+}
+
+.userImage-container img {
+    border-radius: 50%;
+    height: 95px;
 }
