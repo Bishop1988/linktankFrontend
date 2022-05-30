@@ -1,7 +1,7 @@
 import "../styles/navbar.css"
 import{Link} from 'react-router-dom'
 
-const Navbar = ({user}) => {
+const Navbar = ({user, setUser}) => {
     return (
         <div className="navbar_container">
             <div className="navbar_leftside">
@@ -18,7 +18,7 @@ const Navbar = ({user}) => {
                     :
                     <>
                     <Link to={'/Login'} className="navbar_button">Account settings</Link>
-                    <Link to={'/Login'} className="navbar_button">Log out</Link>)</>}
+                    <Link to={'/'} onClick={() =>setUser("")} className="navbar_button">Log out</Link></>}
                     {/* again, conditional rendering based onif there is a logged in user */}
             </div>
         </div>
