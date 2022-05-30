@@ -27,6 +27,7 @@ const Signup = ({ setUser }) => {
   // console.log(user)
   return (
     <div className="signup">
+      <div className="spacer"></div>
       <h1>Create an account</h1>
       <p>Sign up for LinkTank today! For some reason? Not really sure why.</p>
       <p>Burn social media. Down with capitalism.</p>

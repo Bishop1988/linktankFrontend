@@ -16,7 +16,9 @@ function LoginForm({ setUser }) {
             password: password
         }
 
-        setUser(loginUser);
+        const name = loginUser.username
+
+        setUser(name);
 
     }
   return (

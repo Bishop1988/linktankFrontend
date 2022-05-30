@@ -65,3 +65,21 @@ export const updateUser = async (username, updateObj, setter) => {
         console.log(err)
     }
 }
+
+// export const updateUserLink = async (username, linkId, updateObj, setter) => {
+//     try {
+//         const response = await fetch(`${process.env.REACT_APP_REST_API}user/userLink`, {
+//             method: "PUT",
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify({
+//                 username: username,
+//                 linkId: linkId,
+//                 updateObj: updateObj
+//             })
+//         })
+//         const data = await response.json()
+//         setter(data.user)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }

@@ -20,6 +20,7 @@ const Userpage=({user})=>{
 
     return(
         <div className="userPage_container">
+            <div className="spacer"></div>
                 <h2 className="userPage_header">{target}'s profile</h2>
                 {profile ? (
                     profile.socialLinks.map(link=><a key={link.socialName} target='_blank' rel="noreferrer" href={link.url} className="userPage_SocialLink">{link.socialName}</a>)
