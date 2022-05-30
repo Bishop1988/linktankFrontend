@@ -66,6 +66,47 @@ export const updateUser = async (username, updateObj, setter) => {
     }
 }
 
+export const deleteUserLink = async (username, index, setter) => {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}user/link`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: username,
+            index: index
+        })
+    })
+    const data = await response.json()
+    setter(data.user)
+}
+
+export const updateUserLinkSocialName = async (username, socialName, index, setter) => {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}user/linkSocial`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: username,
+            index: index,
+            socialName: socialName
+        })
+    })
+    const data = await response.json()
+    setter(data.user)
+}
+
+export const updateUserLinkUrl = async (username, url, index, setter) => {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}user/linkUrl`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: username,
+            index: index,
+            url: url
+        })
+    })
+    const data = await response.json()
+    setter(data.user)
+}
+
 // export const updateUserLink = async (username, linkId, updateObj, setter) => {
 //     try {
 //         const response = await fetch(`${process.env.REACT_APP_REST_API}user/userLink`, {

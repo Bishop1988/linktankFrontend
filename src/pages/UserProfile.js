@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUser, updateUser, updateUserLink } from "../utils";
-import { v4 as uuidv4 } from 'uuid';
+import { getUser, updateUser, updateUserLinkUrl, deleteUserLink, updateUserLinkSocialName } from "../utils";
 import steveGary from "../img/steve-gary-smol.png"
 
 import "../styles/userProfile.css"
@@ -9,13 +8,14 @@ const UserProfile = () => {
     const [user, setUser] = useState({})
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
-    // const [editLinkTitle, setEditLinkTitle] = useState(linkTitle)
-    // const [editLinkAddress, setEditLinkAddress] = useState(linkAddress)
-
+    const [linkTitleEditing, setLinkTitleEditing] = useState(null)
+    const [linkUrlEditing, setLinkUrlEditing] = useState(null)
+    const [editLinkTitle, setEditLinkTitle] = useState("")
+    const [editLinkUrl, setEditLinkUrl] = useState("")
 
 
     useEffect(() => {
-        getUser("wobwob" ,setUser)
+        getUser("tod" ,setUser)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -31,15 +31,14 @@ const UserProfile = () => {
 
         const newLink = {
             socialName: linkTitle,
-            url: linkAddress,
-            id: uuidv4()
+            url: linkAddress
         }
 
         setLinkTitle("")
         setLinkAddress("")
         // console.log(newLink)
 
-        updateUser("wobwob", newLink, setUser)
+        updateUser("tod", newLink, setUser)
         
     } 
 
@@ -52,23 +51,17 @@ const UserProfile = () => {
         console.log(id)
     }
 
-    // const dummyLinkData = {
-    //     socialName: "test1",
-    //     url: "www.test1.com"
-    // }
-
     const editLinkHandler = (id) => {
         console.log(id)
-        // updateUserLink("rob", id, dummyLinkData, setUser)
     }
 
-    // const editNameHandler = () => {
-        
-    // }
+    const editNameHandler = (e) => {
+        setEditLinkTitle(e.target.value)
+    }
 
-    // const editUrlHandler = () => {
-
-    // }
+    const editUrlHandler = (e) => {
+        setEditLinkUrl(e.target.value)
+    }
 
     console.log(user)
     
@@ -121,21 +114,50 @@ const UserProfile = () => {
                     return (
                         <div className="userProfile_link-card" key={i}>
                             <div className="userProfile_link-card-name">
-                                <p>{item.socialName}</p>
-                                {/* <div className="userProfile_link-card-button">
-                                    <button>edit</button>
-                                </div> */}
+                                {linkTitleEditing === i ? (
+                                    <input  
+                                        type="text"
+                                        onChange={editNameHandler}
+                                    />
+                                ) : (
+                                    <p>{item.socialName}</p>
+                                )}
+                                <div className="userProfile_link-card-button">
+                                    {linkTitleEditing === i ? (
+                                        <button onClick={() => {
+                                            updateUserLinkSocialName(user.username, editLinkTitle, i, setUser)
+                                            setLinkTitleEditing(null)
+                                        }}>Update</button>
+                                    ) : (
+                                        <button onClick={() => {
+                                            setLinkTitleEditing(i)
+                                        }}>Edit</button>
+                                    )}
+                                </div>
                             </div>
                             <div className="userProfile_link-card-url">
-                                <p>{item.url}</p>
-                                {/* <div className="userProfile_link-card-button">
-                                    <button>edit</button>
-                                </div> */}
+                            {linkUrlEditing === i ? (
+                                    <input  
+                                        type="text"
+                                        onChange={editUrlHandler}
+                                    />
+                                ) : (
+                                    <p>{item.url}</p>
+                                )}
                                 <div className="userProfile_link-card-button">
-                                    <button onClick={() => deleteLinkHandler(item.id)}>Delete</button>
+                                {linkUrlEditing === i ? (
+                                        <button onClick={() => {
+                                            updateUserLinkUrl(user.username, editLinkUrl, i, setUser)
+                                            setLinkUrlEditing(null)
+                                        }}>Update</button>
+                                    ) : (
+                                        <button onClick={() => {
+                                            setLinkUrlEditing(i)
+                                        }}>Edit</button>
+                                    )}
                                 </div>
                                 <div className="userProfile_link-card-button">
-                                    <button onClick={() => editLinkHandler(item.id)}>Edit</button>
+                                    <button onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
                                 </div>
                             </div>
                         </div>
