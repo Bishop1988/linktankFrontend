@@ -20,6 +20,7 @@ function LoginForm({ setUser }) {
 
     }
   return (
+    
       <form onSubmit={submitHandler}>
           <div className="form-inner">
               <h2>Login</h2>
