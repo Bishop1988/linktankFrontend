@@ -20,6 +20,11 @@ const Userpage = ({ user }) => {
       <img className="userpage_profile_pic" src={profilePic} alt="Steve Gary placeholder picture" />
       <h2 className="userPage_header">{target}'s profile</h2>
       {user === target && <p>Your sharable URL is: {fullUrl}</p>}
+      {user === target && (
+        <Link className="userPage_edit" to={"/UserProfile"}>
+          Edit your profile
+        </Link>
+      )}
       </div>
 
       {/* {profile ? (
@@ -51,11 +56,6 @@ const Userpage = ({ user }) => {
             })}
         </div>
       }
-      {user === target && (
-        <Link className="userPage_edit" to={"/UserProfile"}>
-          Edit your profile
-        </Link>
-      )}
     </div>
   );
 };
