@@ -60,13 +60,6 @@ const Signup = ({ setUser }) => {
           <i onClick={togglePasswordVisibility}>{showEye ? eyeSlash : eye}</i>
         </div> */}
         <button type="submit">Sign Up</button>
-        {/* {user.map((item, i) => {
-          return (
-            <div>
-              <p>{item.message}</p>
-            </div>
-          )
-        })} */}
       </form>  
     </div>
   )

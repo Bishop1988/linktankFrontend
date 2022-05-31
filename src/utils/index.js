@@ -17,7 +17,7 @@ export const signUp = async (username, email, password, setter) => {
         console.log(err)
     }
 }
-
+// change to checktoken
 export const login = async (setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
@@ -26,7 +26,7 @@ export const login = async (setter) => {
         })
         const data = await response.json()
         setter(data.user)
-        console.log(data)
+        console.log(data + "login has executed")
     } catch (err) {
         console.log(err)
     }

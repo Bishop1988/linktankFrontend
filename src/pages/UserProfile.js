@@ -4,7 +4,7 @@ import steveGary from "../img/steve-gary-smol.png"
 
 import "../styles/userProfile.css"
 
-const UserProfile = () => {
+const UserProfile = ({loggedIn}) => {
     const [user, setUser] = useState({})
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
@@ -13,6 +13,7 @@ const UserProfile = () => {
     const [editLinkTitle, setEditLinkTitle] = useState("")
     const [editLinkUrl, setEditLinkUrl] = useState("")
 
+    if(loggedIn) {console.log(loggedIn)}
 
     useEffect(() => {
         getUser("tod" ,setUser)
@@ -42,11 +43,6 @@ const UserProfile = () => {
         
     } 
 
-    // const deleteLinkHandler = (id) => {
-    //     const updatedLinks = [...links].filter(link => link.id !== id)
-    //     setLinks(updatedLinks)
-    // }
-
     const deleteLinkHandler = (id) => {
         console.log(id)
     }
@@ -63,7 +59,7 @@ const UserProfile = () => {
         setEditLinkUrl(e.target.value)
     }
 
-    console.log(user)
+    // console.log(user)
     
     return ( 
         <div className="userProfile_container">
@@ -76,7 +72,7 @@ const UserProfile = () => {
                         </div>
                         <p>@{user.username}</p>
                         {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
-                            console.log(item)
+                            // console.log(item)
                             return (
                                 <a key={i} className="userProfile_link-mobile-a" href={`http://${item.url}`} target="_blank" rel="noreferrer">
                                     <div className="userProfile_link-mobile-display" >
@@ -110,7 +106,7 @@ const UserProfile = () => {
                     </div>
                 </form>
                 {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
-                    console.log(item)
+                    // console.log(item)
                     return (
                         <div className="userProfile_link-card" key={i}>
                             <div className="userProfile_link-card-name">
@@ -118,6 +114,7 @@ const UserProfile = () => {
                                     <input  
                                         type="text"
                                         onChange={editNameHandler}
+                                        // value={user.socialLinks[i].socialName}
                                     />
                                 ) : (
                                     <p>{item.socialName}</p>
