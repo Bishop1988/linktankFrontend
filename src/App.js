@@ -1,12 +1,13 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Edit from "./pages/Edit"
 import UserProfile from "./pages/UserProfile";
 import UserPage from "./pages/UserPage"
+// import { login } from "./utils";
 
 import './App.css';
 
@@ -15,7 +16,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [user, setUser] = useState("");
+  // const [loggedIn, setLoggedIn] = useState()
   console.log(user)
+
+  // useEffect(() => {
+  //   login(setUser)
+  // }, [])
+
+  console.log(user)
+
   return (
     <Router>
       <div className="App">

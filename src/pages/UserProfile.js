@@ -4,7 +4,7 @@ import steveGary from "../img/steve-gary-smol.png"
 
 import "../styles/userProfile.css"
 
-const UserProfile = () => {
+const UserProfile = ({loggedIn}) => {
     const [user, setUser] = useState({})
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
@@ -13,6 +13,7 @@ const UserProfile = () => {
     const [editLinkTitle, setEditLinkTitle] = useState("")
     const [editLinkUrl, setEditLinkUrl] = useState("")
 
+    if(loggedIn) {console.log(loggedIn)}
 
     useEffect(() => {
         getUser("testsignuplol" ,setUser)
@@ -42,11 +43,6 @@ const UserProfile = () => {
         
     } 
 
-    // const deleteLinkHandler = (id) => {
-    //     const updatedLinks = [...links].filter(link => link.id !== id)
-    //     setLinks(updatedLinks)
-    // }
-
     const deleteLinkHandler = (id) => {
         console.log(id)
     }
@@ -63,7 +59,7 @@ const UserProfile = () => {
         setEditLinkUrl(e.target.value)
     }
 
-    console.log(user)
+    // console.log(user)
     
     return ( 
         <div className="userProfile_container">
@@ -76,7 +72,7 @@ const UserProfile = () => {
                         </div>
                         <p>@{user.username}</p>
                         {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
-                            console.log(item)
+                            // console.log(item)
                             return (
                                 <a key={i} className="userProfile_link-mobile-a" href={`http://${item.url}`} target="_blank" rel="noreferrer">
                                     <div className="userProfile_link-mobile-display" >
@@ -91,10 +87,6 @@ const UserProfile = () => {
 
             <div className="userProfile_add-link-container">
                 <form onSubmit={submitHandler} className="userProfile_form">
-                    <div className="userProfile_button-container">
-                        <button  className="userProfile_button">add new link</button>
-                    </div>
-
                     <div className="userProfile_cards-container">
                         <div className="userProfile_inputs">
                             <div className="userProfile_input-container">
@@ -105,12 +97,14 @@ const UserProfile = () => {
                                 <label for="inputLinkUrl">Social URL</label>
                                 <input required id="inputLinkUrl" onChange={inputLinkAddressHandler} className="userProfile_input" type="text" value={linkAddress} />
                             </div>
-                            
+                            <div className="userProfile_button-container">
+                        <button  className="userProfile_button">add new link</button>
+                    </div>
                         </div>
                     </div>
                 </form>
                 {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
-                    console.log(item)
+                    // console.log(item)
                     return (
                         <div className="userProfile_link-card" key={i}>
                             <div className="userProfile_link-card-name">
@@ -118,18 +112,19 @@ const UserProfile = () => {
                                     <input  
                                         type="text"
                                         onChange={editNameHandler}
+                                        // value={user.socialLinks[i].socialName}
                                     />
                                 ) : (
-                                    <p>{item.socialName}</p>
+                                    <p className="userProfile_link-socialName">{item.socialName}</p>
                                 )}
                                 <div className="userProfile_link-card-button">
                                     {linkTitleEditing === i ? (
-                                        <button onClick={() => {
+                                        <button className="userProfile_update-button" onClick={() => {
                                             updateUserLinkSocialName(user.username, editLinkTitle, i, setUser)
                                             setLinkTitleEditing(null)
                                         }}>Update</button>
                                     ) : (
-                                        <button onClick={() => {
+                                        <button className="userProfile_edit-button" onClick={() => {
                                             setLinkTitleEditing(i)
                                         }}>Edit</button>
                                     )}
@@ -142,22 +137,22 @@ const UserProfile = () => {
                                         onChange={editUrlHandler}
                                     />
                                 ) : (
-                                    <p>{item.url}</p>
+                                    <p className="userProfile_link-url">{item.url}</p>
                                 )}
                                 <div className="userProfile_link-card-button">
                                 {linkUrlEditing === i ? (
-                                        <button onClick={() => {
+                                        <button className="userProfile_update-button" onClick={() => {
                                             updateUserLinkUrl(user.username, editLinkUrl, i, setUser)
                                             setLinkUrlEditing(null)
                                         }}>Update</button>
                                     ) : (
-                                        <button onClick={() => {
+                                        <button className="userProfile_edit-button" onClick={() => {
                                             setLinkUrlEditing(i)
                                         }}>Edit</button>
                                     )}
                                 </div>
                                 <div className="userProfile_link-card-button">
-                                    <button onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
+                                    <button className="userProfile_edit-button" onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
                                 </div>
                             </div>
                         </div>

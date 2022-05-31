@@ -50,6 +50,24 @@ export const loginUP = async (email, password, setUser) => {
     }
 };
 
+// export const loginUser = async (email, password, setter) => {
+//     try {
+//         const response = await fetch(`${process.env.REACT_APP_REST_API}user/login`, {
+//             method: "POST",
+//             headers: { Authorization: localStorage.getItem("myToken") },
+//             body: JSON.stringify({
+//                 email: email,
+//                 password: password
+//             })
+//         })
+//         const data = await response.json()
+//         setter(data.user)
+//         console.log(data)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+
 export const getUser = async (username, setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user/getUser`, {
