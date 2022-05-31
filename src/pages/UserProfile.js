@@ -87,10 +87,6 @@ const UserProfile = ({loggedIn}) => {
 
             <div className="userProfile_add-link-container">
                 <form onSubmit={submitHandler} className="userProfile_form">
-                    <div className="userProfile_button-container">
-                        <button  className="userProfile_button">add new link</button>
-                    </div>
-
                     <div className="userProfile_cards-container">
                         <div className="userProfile_inputs">
                             <div className="userProfile_input-container">
@@ -101,7 +97,9 @@ const UserProfile = ({loggedIn}) => {
                                 <label for="inputLinkUrl">Social URL</label>
                                 <input required id="inputLinkUrl" onChange={inputLinkAddressHandler} className="userProfile_input" type="text" value={linkAddress} />
                             </div>
-                            
+                            <div className="userProfile_button-container">
+                        <button  className="userProfile_button">add new link</button>
+                    </div>
                         </div>
                     </div>
                 </form>
@@ -117,16 +115,16 @@ const UserProfile = ({loggedIn}) => {
                                         // value={user.socialLinks[i].socialName}
                                     />
                                 ) : (
-                                    <p>{item.socialName}</p>
+                                    <p className="userProfile_link-socialName">{item.socialName}</p>
                                 )}
                                 <div className="userProfile_link-card-button">
                                     {linkTitleEditing === i ? (
-                                        <button onClick={() => {
+                                        <button className="userProfile_update-button" onClick={() => {
                                             updateUserLinkSocialName(user.username, editLinkTitle, i, setUser)
                                             setLinkTitleEditing(null)
                                         }}>Update</button>
                                     ) : (
-                                        <button onClick={() => {
+                                        <button className="userProfile_edit-button" onClick={() => {
                                             setLinkTitleEditing(i)
                                         }}>Edit</button>
                                     )}
@@ -139,22 +137,22 @@ const UserProfile = ({loggedIn}) => {
                                         onChange={editUrlHandler}
                                     />
                                 ) : (
-                                    <p>{item.url}</p>
+                                    <p className="userProfile_link-url">{item.url}</p>
                                 )}
                                 <div className="userProfile_link-card-button">
                                 {linkUrlEditing === i ? (
-                                        <button onClick={() => {
+                                        <button className="userProfile_update-button" onClick={() => {
                                             updateUserLinkUrl(user.username, editLinkUrl, i, setUser)
                                             setLinkUrlEditing(null)
                                         }}>Update</button>
                                     ) : (
-                                        <button onClick={() => {
+                                        <button className="userProfile_edit-button" onClick={() => {
                                             setLinkUrlEditing(i)
                                         }}>Edit</button>
                                     )}
                                 </div>
                                 <div className="userProfile_link-card-button">
-                                    <button onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
+                                    <button className="userProfile_edit-button" onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
                                 </div>
                             </div>
                         </div>
