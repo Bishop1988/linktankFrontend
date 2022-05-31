@@ -4,8 +4,8 @@ import steveGary from "../img/steve-gary-smol.png"
 
 import "../styles/userProfile.css"
 
-const UserProfile = ({loggedIn}) => {
-    const [user, setUser] = useState({})
+const UserProfile = ({user}) => {
+    const [loggedUser, setLoggedUser] = useState({})
     const [linkTitle, setLinkTitle] = useState("")
     const [linkAddress, setLinkAddress] = useState("")
     const [linkTitleEditing, setLinkTitleEditing] = useState(null)
@@ -13,10 +13,9 @@ const UserProfile = ({loggedIn}) => {
     const [editLinkTitle, setEditLinkTitle] = useState("")
     const [editLinkUrl, setEditLinkUrl] = useState("")
 
-    if(loggedIn) {console.log(loggedIn)}
 
     useEffect(() => {
-        getUser("testsignuplol" ,setUser)
+        getUser(user ,setLoggedUser)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -39,7 +38,7 @@ const UserProfile = ({loggedIn}) => {
         setLinkAddress("")
         // console.log(newLink)
 
-        updateUser("testsignuplol", newLink, setUser)
+        updateUser(user, newLink, setLoggedUser)
         
     } 
 
@@ -70,8 +69,8 @@ const UserProfile = ({loggedIn}) => {
                         <div className="userImage-container">
                             <img src={steveGary} alt="profile" />
                         </div>
-                        <p>@{user.username}</p>
-                        {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
+                        <p>@{loggedUser.username}</p>
+                        {<div>{user && loggedUser.socialLinks && loggedUser.socialLinks.map((item, i) => {
                             // console.log(item)
                             return (
                                 <a key={i} className="userProfile_link-mobile-a" href={`http://${item.url}`} target="_blank" rel="noreferrer">
@@ -103,7 +102,7 @@ const UserProfile = ({loggedIn}) => {
                         </div>
                     </div>
                 </form>
-                {<div>{user && user.socialLinks && user.socialLinks.map((item, i) => {
+                {<div>{loggedUser && loggedUser.socialLinks && loggedUser.socialLinks.map((item, i) => {
                     // console.log(item)
                     return (
                         <div className="userProfile_link-card" key={i}>
@@ -120,7 +119,7 @@ const UserProfile = ({loggedIn}) => {
                                 <div className="userProfile_link-card-button">
                                     {linkTitleEditing === i ? (
                                         <button className="userProfile_update-button" onClick={() => {
-                                            updateUserLinkSocialName(user.username, editLinkTitle, i, setUser)
+                                            updateUserLinkSocialName(loggedUser.username, editLinkTitle, i, setLoggedUser)
                                             setLinkTitleEditing(null)
                                         }}>Update</button>
                                     ) : (
@@ -142,7 +141,7 @@ const UserProfile = ({loggedIn}) => {
                                 <div className="userProfile_link-card-button">
                                 {linkUrlEditing === i ? (
                                         <button className="userProfile_update-button" onClick={() => {
-                                            updateUserLinkUrl(user.username, editLinkUrl, i, setUser)
+                                            updateUserLinkUrl(loggedUser.username, editLinkUrl, i, setLoggedUser)
                                             setLinkUrlEditing(null)
                                         }}>Update</button>
                                     ) : (
@@ -152,7 +151,7 @@ const UserProfile = ({loggedIn}) => {
                                     )}
                                 </div>
                                 <div className="userProfile_link-card-button">
-                                    <button className="userProfile_edit-button" onClick={() => deleteUserLink(user.username, i, setUser)}>Delete</button>
+                                    <button className="userProfile_edit-button" onClick={() => deleteUserLink(loggedUser.username, i, setLoggedUser)}>Delete</button>
                                 </div>
                             </div>
                         </div>
