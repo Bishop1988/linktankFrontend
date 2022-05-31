@@ -16,9 +16,11 @@ const Userpage = ({ user }) => {
   return (
     <div className="userPage_container">
       <div className="spacer"></div>
+      <div className="userpage_topbox">
+      <img className="userpage_profile_pic" src={profilePic} alt="Steve Gary placeholder picture" />
       <h2 className="userPage_header">{target}'s profile</h2>
-      <img className="stevegary_profile_pic" src={profilePic} alt="Steve Gary" />
       {user === target && <p>Your sharable URL is: {fullUrl}</p>}
+      </div>
 
       {/* {profile ? (
                     profile.socialLinks.map(link=><a key={link.socialName} target='_blank' rel="noreferrer" href={link.url} className="userPage_SocialLink">{link.socialName}</a>)
