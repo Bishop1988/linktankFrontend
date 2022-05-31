@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import "../styles/navbar.css"
-import{Link} from 'react-router-dom'
 
 const Navbar = ({user, setUser}) => {
     return (
@@ -10,16 +10,17 @@ const Navbar = ({user, setUser}) => {
                 {/* if there is a user (which should mean logged in) then this shows */}
             </div>
             <div className="navbar_rightside">
-                {!user?
-                    <>
-                    <Link to={"/Signup"} className="navbar_button">Sign up</Link>
-                    <Link to={'/Login'}className="navbar_button">Log in</Link>
-                    </>
+                {!user ?
+                    (<>
+                    <Link to={"/signup"} className="navbar_button">Sign up</Link>
+                    <Link to={'/login'}className="navbar_button">Log in</Link>
+                    </>)
                     :
-                    <>
+                    (<>
                     <Link to={'/Login'} className="navbar_button">Account settings</Link>
-                    <Link to={'/'} onClick={() =>setUser("")} className="navbar_button">Log out</Link></>}
-                    {/* again, conditional rendering based onif there is a logged in user */}
+                    <Link to={'/'} onClick={() =>setUser("")} className="navbar_button">Log out</Link>
+                    </>)
+                }
             </div>
         </div>
     )

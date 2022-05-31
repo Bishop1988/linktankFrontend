@@ -34,16 +34,15 @@
     left: -6px;
     right: -6px;
     bottom: -6px;
-    z-index: 1;
-    background-image: linear-gradient(to bottom right, rgb(151, 213, 237), rgb(37, 213, 196));
 }
 
 .Loginform_form .form-inner {
     position: relative;
     display:block;
-    background-color: whitesmoke;
+    background-color: lightgray;
     padding: 30px;
     z-index: 2;
+    text-align: center;
 } */
 
 /* Login title */

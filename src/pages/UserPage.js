@@ -11,7 +11,7 @@ const Userpage=({user})=>{
     useEffect(()=>{
         try{
             async function getData(){
-                const profileDetails=await getUser(target)
+                const profileDetails=await getUser(target,setProfile)
                 setProfile(profileDetails)}
             getData()
         }catch(e){console.log(e)}
@@ -20,6 +20,7 @@ const Userpage=({user})=>{
 
     return(
         <div className="userPage_container">
+            <div className="spacer"></div>
                 <h2 className="userPage_header">{target}'s profile</h2>
                 {profile ? (
                     profile.socialLinks.map(link=><a key={link.socialName} target='_blank' rel="noreferrer" href={link.url} className="userPage_SocialLink">{link.socialName}</a>)
@@ -27,7 +28,7 @@ const Userpage=({user})=>{
                     "This user has not set up a profile yet!" 
                 )}
                 {/* conditional rendering so an unset profile doesn't try to render a profile */}
-                {user.username===target && <Link className="userPage_edit" to={"/UserProfile"}>Edit your profile</Link>}
+                {user===target && <Link className="userPage_edit" to={"/UserProfile"}>Edit your profile</Link>}
 
         </div>
     )
