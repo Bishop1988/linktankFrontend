@@ -34,9 +34,9 @@ const App = () => {
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/signup" element={<Signup setUser={setUser} />} />
           <Route path="/edit" element={<Edit />} />
-          <Route path="/userProfile" user={user} element={<UserProfile />} />
-          <Route path="/userPage" user={user} element={<UserPage user={user}/>}/>
-          {/* <Route path="/userPage/:target" element={<UserPage user={user}/>}/> */}
+          <Route path="/UserProfile" element={<UserProfile />} />
+          {/* <Route path="/userPage" element={<UserPage user={user}/>}/> */}
+          <Route path="/u/:target" element={<UserPage user={user}/>}/>
         </Routes>
         <Footer />
       </div>

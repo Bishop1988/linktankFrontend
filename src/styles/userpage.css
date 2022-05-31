@@ -1,0 +1,29 @@
+.userPage_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    height: calc(100vh - 70px);
+    min-height: 800px;
+
+    margin-top: 70px;
+}
+.userpage_profile_pic{
+    padding:10px;
+    height: 150px;
+    width: 150px;
+}
+.userpage_topbox{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    flex-direction: column;
+    padding: 30px;
+}
+.userPage_header{
+    font-size:50px;
+}
+.userPage_edit{
+    display:flex;
+    justify-content:center;
+}

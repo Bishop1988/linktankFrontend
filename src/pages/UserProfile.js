@@ -16,7 +16,7 @@ const UserProfile = ({loggedIn}) => {
     if(loggedIn) {console.log(loggedIn)}
 
     useEffect(() => {
-        getUser("tod" ,setUser)
+        getUser("testsignuplol" ,setUser)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -39,7 +39,7 @@ const UserProfile = ({loggedIn}) => {
         setLinkAddress("")
         // console.log(newLink)
 
-        updateUser("tod", newLink, setUser)
+        updateUser("testsignuplol", newLink, setUser)
         
     } 
 
