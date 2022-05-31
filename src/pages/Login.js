@@ -3,15 +3,15 @@ import  LoginForm  from "../components/LoginForm";
 
 import "../styles/login.css"
 
-const Login = () => {
+const Login = ({ setUser}) => {
   // const adminUser = {
   //   email: "a@a.com",
   //   password: "a123"
   // }
 
-const [user, setUser] = useState ({});
+// const [user, setUser] = useState ({});
 
-console.log(user)
+// console.log(user)
 
 // console.log(user)
 // const [error,setError] = useState ("");

@@ -11,7 +11,7 @@ const Userpage=({user})=>{
     useEffect(()=>{
         try{
             async function getData(){
-                const profileDetails=await getUser(target)
+                const profileDetails=await getUser(target,setProfile)
                 setProfile(profileDetails)}
             getData()
         }catch(e){console.log(e)}
@@ -28,7 +28,7 @@ const Userpage=({user})=>{
                     "This user has not set up a profile yet!" 
                 )}
                 {/* conditional rendering so an unset profile doesn't try to render a profile */}
-                {user.username===target && <Link className="userPage_edit" to={"/UserProfile"}>Edit your profile</Link>}
+                {user===target && <Link className="userPage_edit" to={"/UserProfile"}>Edit your profile</Link>}
 
         </div>
     )
