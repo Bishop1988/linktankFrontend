@@ -18,19 +18,37 @@ export const signUp = async (username, email, password, setter) => {
     }
 }
 
-export const login = async (setter) => {
+// export const login = async (setter) => {
+//     try {
+//         const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+//             method: "GET",
+//             headers: { Authorization: localStorage.getItem("myToken") }
+//         })
+//         const data = await response.json()
+//         setter(data.user)
+//         console.log(data)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+
+export const loginUP = async (email, password, setUser) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
-            method: "GET",
-            headers: { Authorization: localStorage.getItem("myToken") }
-        })
-        const data = await response.json()
-        setter(data.user)
-        console.log(data)
-    } catch (err) {
-        console.log(err)
+        const response = await fetch(`${process.env.REACT_APP_REST_API}login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                email: email,
+                password: password,
+            }),
+        });
+        const data = await response.json();
+        console.log(data.username);
+        setUser(data.username);
+    } catch (error) {
+        console.log(error);
     }
-}
+};
 
 export const getUser = async (username, setter) => {
     try {

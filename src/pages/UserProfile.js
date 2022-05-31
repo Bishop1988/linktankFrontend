@@ -15,7 +15,7 @@ const UserProfile = () => {
 
 
     useEffect(() => {
-        getUser("tod" ,setUser)
+        getUser("testsignuplol" ,setUser)
     }, [])
 
     const inputLinkTitleHandler = (e) => {
@@ -38,7 +38,7 @@ const UserProfile = () => {
         setLinkAddress("")
         // console.log(newLink)
 
-        updateUser("tod", newLink, setUser)
+        updateUser("testsignuplol", newLink, setUser)
         
     } 
 
