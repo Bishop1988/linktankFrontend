@@ -2,7 +2,10 @@ import "../styles/edit.css"
 
 const Edit = () => {
   return (
-    <h1>This is the edit page</h1>
+    <>
+       <div className="spacer"></div>
+       <h1>This is the edit page</h1>
+    </>
   )
 }
 
