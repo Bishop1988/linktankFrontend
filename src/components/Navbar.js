@@ -5,20 +5,20 @@ const Navbar = ({user, setUser}) => {
     return (
         <div className="navbar_container">
             <div className="navbar_leftside">
-                <Link to={'/'} className="navbar_title">Linktank</Link>
-                {user && <Link to={`u/${user}`} className="navbar_mypage">My page</Link>} 
+                <Link to={'/'} className="navbar-link linktank-main">Linktank</Link>
+                {user && <Link to={`u/${user}`} className="navbar-link">My page</Link>} 
                 {/* if there is a user (which should mean logged in) then this shows */}
             </div>
             <div className="navbar_rightside">
                 {!user ?
                     (<>
-                    <Link to={"/signup"} className="navbar_button">Sign up</Link>
-                    <Link to={'/login'}className="navbar_button">Log in</Link>
+                    <Link to={"/signup"} className="navbar-link">Sign up</Link>
+                    <Link to={'/login'}className="navbar-link">Log in</Link>
                     </>)
                     :
                     (<>
-                    <Link to={'/Login'} className="navbar_button">Account settings</Link>
-                    <Link to={'/'} onClick={() =>setUser("")} className="navbar_button">Log out</Link>
+                    <Link to={'/UserProfile'} className="navbar-link">Edit Profile</Link>
+                    <Link to={'/'} onClick={() =>setUser("")} className="navbar-link">Log out</Link>
                     </>)
                 }
             </div>

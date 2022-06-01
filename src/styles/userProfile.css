@@ -4,8 +4,6 @@
     background-color: aliceblue;
     height: calc(100vh - 70px);
     min-height: 800px;
-
-    margin-top: 70px;
 }
 
 .userProfile_display-link-container {

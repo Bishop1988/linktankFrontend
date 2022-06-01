@@ -1,18 +1,26 @@
+
+.hero{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .calltoaction_text {
-  font-family: roboto;
-  height: 12vh;
-  padding-top: 20vh;
+  font-family: 'Raleway', sans-serif;
+  height: 20vh;
+  padding-top: 1vh;
   margin-top: 1vh; 
-  font-size: 35px;
+  font-size: 70px;
   color: black;
   
 }
 
-.home_desktop {
+/* .hero {
   display: flex;
   width: 40vw;
   margin-left: 20vw;
-}
+} */
 
 
 @media screen and (max-width: 576px) {

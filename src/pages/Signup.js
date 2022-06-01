@@ -10,8 +10,8 @@ const Signup = ({ setUser }) => {
   // const [passwordVisible, setPasswordVisible] = useState(false);
   // const [showEye, setShowEye] = useState(true);
   const [email, setEmail] = useState("");
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   // const [user, setUser] = useState("");
 
   // const togglePasswordVisibility = () => {
@@ -22,15 +22,15 @@ const Signup = ({ setUser }) => {
   const handleSignup = (e) => {    
     e.preventDefault();
     signUp(username, email, password, setUser)
+    
     // console.log(username, email, password)
   }
   // console.log(user)
   return (
     <div className="signup">
-      <h2>Create an account</h2>
-      <p className="text">Sign up for LinkTank today! 
-      For some reason? Not really sure why. Burn social media. 
-      Down with capitalism.</p>
+      <h2 className="signup-title">Sign Up</h2>
+      <p className="text">Sign Up to Link Tank today! One link for all your links!
+      </p>
       <form className="test" onSubmit={handleSignup}>
       <input
               onChange={(e) => setUsername(e.target.value)}
@@ -59,7 +59,7 @@ const Signup = ({ setUser }) => {
         {/* <div>
           <i onClick={togglePasswordVisibility}>{showEye ? eyeSlash : eye}</i>
         </div> */}
-        <button type="submit">Sign Up</button>
+        <button className="signup-btn"type="submit">Sign Up</button>
       </form>  
     </div>
   )

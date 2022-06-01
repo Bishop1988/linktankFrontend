@@ -9,14 +9,16 @@ export const Stevegary = () => {
             <p className="stevegary_user_name">Steve Gary</p>
             <p className="stevegary_user_title">Software Engineer</p>
             <div className="stevegary_custom_links">
-                <div className="stevegary_link">
+                <div className="stevegary_p">
+
                     <Link to="/UserProfile">PORTFOLIO</Link>
                 </div>
-                <div className="stevegary_link">
+                <div className="stevegary_r">
                     <a href="#" alt="dummy resume link">RESUME</a>
                 </div>
-                <div className="stevegary_link">
+                <div className="stevegary_e">
                     <a href="#" alt="dummy email link">EMAIL</a>
+
                 </div>
             </div>
             <div className="stevegary_social_icons">

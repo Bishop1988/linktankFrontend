@@ -1,13 +1,17 @@
 .navbar_container {
-  position: fixed;
+  /* position: right; */
+  text-align: right;
   right: 0;
   left: 0;
   top: 0;
   height: 70px;
-  padding: 0.2rem;
-  background-color: lightgray;
-  background-image: lightgray;
-  color: white;
+  padding: 1rem;
+  background-color: rgb(243, 243, 243);
+  color: #000000;
+  text-decoration: none;
+
+  font-family: helvetica;
+  font-weight: 700;
 }
 
 .navbar-link {
@@ -17,4 +21,18 @@
 
 .navbar_links:hover {
   color: green;
+}
+
+.linktank-main {
+  color: #000000;
+  text-decoration: none;
+  font: bold;
+  text-align: left;
+
+}
+
+.navbar-link:link, .navbar-link:visited,  .navbar-link:hover, .navbar-link:active
+{
+    color: #000000;
+    text-decoration: none;
 }
